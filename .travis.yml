@@ -47,7 +47,7 @@ jobs:
       name: macOS / Xcode 10.2
       xcode_workspace: Example/SwiftyFontIcon.xcworkspace
       xcode_scheme: SwiftyFontIcon-Example
-      xcode_destination: platform=iOS Simulator,OS=13.6,name=iPhone 8
+      xcode_destination: platform=iOS Simulator,OS=13.6,name=iPhone SE (2nd generation)
       # after_success: bash <(curl -s https://codecov.io/bash)
 
     - name: '`pod trunk push`'
