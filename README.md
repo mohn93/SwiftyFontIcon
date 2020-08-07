@@ -1,6 +1,6 @@
 # SwiftyFontIcon
 
-[![CI Status](https://img.shields.io/travis/mohn93/SwiftyFontIcon.svg?style=flat)](https://travis-ci.org/mohn93/SwiftyFontIcon)
+[![CI Status](https://travis-ci.org/mohn93/SwiftyFontIcon.svg?branch=master)](https://travis-ci.org/mohn93/SwiftyFontIcon)
 [![Version](https://img.shields.io/cocoapods/v/SwiftyFontIcon.svg?style=flat)](https://cocoapods.org/pods/SwiftyFontIcon)
 [![License](https://img.shields.io/cocoapods/l/SwiftyFontIcon.svg?style=flat)](https://cocoapods.org/pods/SwiftyFontIcon)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyFontIcon.svg?style=flat)](https://cocoapods.org/pods/SwiftyFontIcon)
