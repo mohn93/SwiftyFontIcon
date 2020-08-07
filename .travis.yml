@@ -39,7 +39,7 @@ jobs:
       cache: cocoapods
       install: gem install cocoapods -v '~> 1.7.0'
       script: pod lib lint --allow-warnings --fail-fast --swift-version=$SWIFT
-      osx_image: xcode10
+      osx_image: xcode11.6
       env: SWIFT=5.0
 
     - &test
