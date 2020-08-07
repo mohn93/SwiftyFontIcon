@@ -26,11 +26,11 @@ branches:
     - develop
 stages:
   - name: lint
-    # if: NOT branch =~ ^\d+\.\d+\.\d+$
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: test
-    # if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
-    # if: branch =~ ^\d+\.\d+\.\d+$
+    if: branch =~ ^\d+\.\d+\.\d+$
 jobs:
   include:
    

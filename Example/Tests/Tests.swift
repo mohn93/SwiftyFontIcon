@@ -85,24 +85,24 @@ class SwfFontIconSpec: QuickSpec {
                 mockDelegate.verify()
             }
             
-            it("loads fonts async successfully") {
-                let mockDelegate = SwfDelegateMock()
-                
-                SwfIcon.instance.delegate = mockDelegate
-                
-                mockDelegate.expect().call(
-                    mockDelegate.onFontLoaded(fontName: Arg.eq("gm"))
-                )
-                mockDelegate.expect().call(
-                    mockDelegate.onFontLoaded(fontName: Arg.eq("fa"))
-                )
-                
-                SwfIcon.instance.loadAllAsync()
-                waitUntil(timeout: 1) { (done) in
-                    mockDelegate.verify()
-                    done()
-                }
-            }
+//            it("loads fonts async successfully") {
+//                let mockDelegate = SwfDelegateMock()
+//
+//                SwfIcon.instance.delegate = mockDelegate
+//
+//                mockDelegate.expect().call(
+//                    mockDelegate.onFontLoaded(fontName: Arg.eq("gm"))
+//                )
+//                mockDelegate.expect().call(
+//                    mockDelegate.onFontLoaded(fontName: Arg.eq("fa"))
+//                )
+//                
+//                SwfIcon.instance.loadAllAsync()
+//                waitUntil(timeout: 1) { (done) in
+//                    mockDelegate.verify()
+//                    done()
+//                }
+//            }
             it("loads specific fonts async successfully") {
                 let mockDelegate = SwfDelegateMock()
                 
