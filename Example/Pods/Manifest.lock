@@ -1,0 +1,31 @@
+PODS:
+  - InstantMock (2.5.5)
+  - Nimble (7.3.4)
+  - Quick (1.2.0)
+  - SwiftyFontIcon (0.1.0)
+
+DEPENDENCIES:
+  - InstantMock
+  - Nimble (~> 7.0)
+  - Quick
+  - SwiftyFontIcon (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - InstantMock
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  SwiftyFontIcon:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  InstantMock: e54acd60681f61624f764282ea8cea0f78461cce
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  SwiftyFontIcon: 6a05e4012cf1bfcf483323614f16d1d04782cf84
+
+PODFILE CHECKSUM: a2abf297b0a9dcf0b27a91eb7665175f3f1d77a3
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,6 @@
+framework module SwiftyFontIcon {
+  umbrella header "SwiftyFontIcon-umbrella.h"
+
+  export *
+  module * { export * }
+}

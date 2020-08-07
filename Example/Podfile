@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'SwiftyFontIcon_Example' do
+  pod 'SwiftyFontIcon', :path => '../'
+
+  target 'SwiftyFontIcon_Tests' do
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble', '~> 7.0'
+    pod 'InstantMock'
+  end
+end
