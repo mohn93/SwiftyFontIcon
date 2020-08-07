@@ -40,7 +40,7 @@ jobs:
       install: gem install cocoapods -v '~> 1.7.0'
       script: pod lib lint --allow-warnings --fail-fast --swift-version=$SWIFT
       osx_image: xcode10
-      env: SWIFT=4.0
+      env: SWIFT=5.0
 
     - &test
       stage: test
