@@ -57,7 +57,7 @@ jobs:
       install: gem install cocoapods -v '~> 1.7.0'
       script: |
         set -exo pipefail
-        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+        pod trunk push --verbose --allow-warnings | ruby -e 'ARGF.each{ print "." }'
       # ^^ pipe because Travis times us out if there is no output
       # AND `pod` defaults to hardly any output
       # BUT `--verbose` generates so much output that Travis kills our script due to *too much* output!
