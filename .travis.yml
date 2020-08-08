@@ -4,8 +4,7 @@
 
 # osx_image: xcode11.6
 # language: swift
-# # cache: cocoapods
-# # podfile: Example/Podfile
+
 # # before_install:
 # # - gem install cocoapods # Since Travis is not always on latest version
 # # - pod install --project-directory=Example
@@ -20,6 +19,8 @@
 os: osx
 osx_image: xcode11.6
 language: swift
+cache: cocoapods
+podfile: Example/Podfile
 
 branches:
   only:
