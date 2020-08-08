@@ -4,8 +4,7 @@
 
 # osx_image: xcode11.6
 # language: swift
-# # cache: cocoapods
-# # podfile: Example/Podfile
+
 # # before_install:
 # # - gem install cocoapods # Since Travis is not always on latest version
 # # - pod install --project-directory=Example
@@ -20,6 +19,8 @@
 os: osx
 osx_image: xcode11.6
 language: swift
+cache: cocoapods
+podfile: Example/Podfile
 
 branches:
   only:
@@ -28,11 +29,11 @@ branches:
     - /^release/\d+\.\d+\.\d+$/
 stages:
   - name: lint
-    if: NOT branch =~ ^\d+\.\d+\.\d+$
+    if: NOT branch =~ ^release/\d+\.\d+\.\d+$
   - name: test
-    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
+    if: type != push OR branch =~ ^release/\d+\.\d+\.\d+$
   - name: deploy
-    if: branch =~ ^\d+\.\d+\.\d+$
+    if: branch =~ ^release/\d+\.\d+\.\d+$
 jobs:
   include:
    
@@ -56,8 +57,7 @@ jobs:
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
       script: |
-        set -exo pipefail
-        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+        pod trunk push --verbose --allow-warnings | ruby -e 'ARGF.each{ print "." }'
       # ^^ pipe because Travis times us out if there is no output
       # AND `pod` defaults to hardly any output
       # BUT `--verbose` generates so much output that Travis kills our script due to *too much* output!
