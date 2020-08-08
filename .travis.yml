@@ -56,7 +56,6 @@ jobs:
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
       script: |
-        set -exo pipefail
         pod trunk push --verbose --allow-warnings | ruby -e 'ARGF.each{ print "." }'
       # ^^ pipe because Travis times us out if there is no output
       # AND `pod` defaults to hardly any output
