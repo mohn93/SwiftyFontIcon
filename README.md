@@ -9,8 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 SwiftyFontIcon is available through [CocoaPods](https://cocoapods.org). To install
@@ -62,11 +60,11 @@ pod 'SwiftyFontIcon'
     OR If you wanna more readable and clean way:
 
   ```swift
-
+  //FAFontIcon is a class that i generated contains predefined static FontIcon Objects
   imgView.image = .icon(FAFontIcon.faHeart, size: 100)
   // OR
   imgView.image = .icon(FontIcon(name: "fa-ad"), size: 100)
-  // And for the color it changes based on image view tint color
+  // And for the color it changes based on image view tintColor
   imgView.tintColor = .blue
 
   ```
@@ -107,6 +105,17 @@ SwfIcon.instance.loadAllAsync() //Or Sync, depends on your needs
 
 If you need to automate maping these things and create a strongly typed icons to use with `.icon(...)` syntax, you can take a look at this tool https://swiftyicongen.herokuapp.com
 
+## How to use SwiftyIconGenerator to generate you oun custom font
+* Open https://swiftyicongen.herokuapp.com, you'll be presented with list of pre-existing icons you can select from them or you can drag and drop you own SVG icon files.
+* After that name the class of your icons, this should be a valid swift class name.
+* Then click on download, you will recieve a zip file that contains three files:
+  * `config.json`
+  * `{class_name}_icons.swift`
+  * `{class_name}.ttf`
+* Take all of these files and copy them into your project target.
+* Then call this method `setupIconFont()` befor you load fonts in your `AppDelegate.swift`.
+* You are good to go now you can use your icons in your project like this `imgView.image = .icon({class_name}.myIcon, size: 100)`
+
 ## Requirements
 iOS 10 or later.
 Swift 4 
@@ -114,6 +123,10 @@ Swift 4
 ## Author
 
 mohn93, mohn93@gmail.com
+
+## Inspiration
+
+[Swicon](https://github.com/UglyTroLL/Swicon)
 
 ## License
 

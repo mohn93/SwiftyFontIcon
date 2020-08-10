@@ -26,11 +26,7 @@ extension UIImage {
         let image = SwfIcon.instance.getUIImage(icon.name, iconSize: size, imageSize: CGSize(width: size, height: size), renderingMode: .alwaysTemplate)
         if icon.localizable {
             if directionProvider.isRtl(){
-                if let cgImage = image.cgImage {
-                    return UIImage(cgImage: cgImage, scale: 1.0, orientation: .downMirrored)
-                } else {
-                    return image
-                }
+                return image.imageFlippedForRightToLeftLayoutDirection().withRenderingMode(.alwaysTemplate)
             }else{
                 return image
             }
