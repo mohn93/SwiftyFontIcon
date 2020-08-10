@@ -41,7 +41,7 @@ class SwfFontIconSpec: QuickSpec {
                 let directionProvider = DirectionProviderMock()
                 directionProvider.it.stub().call(directionProvider.isRtl()).andReturn(true)
                 let icon:UIImage = .icon(FontIcon(name: "icon").localized(), directionProvider: directionProvider)
-                expect(icon.isEqual(UIImage())) == true
+                expect(icon.isEqual(UIImage().withRenderingMode(.alwaysTemplate).imageFlippedForRightToLeftLayoutDirection())) == true
             }
             it("gets new localized and the layout is not rtl empty UIImage") {
                 SwfIcon.instance.loadAllSync()
