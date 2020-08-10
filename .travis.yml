@@ -32,9 +32,9 @@ stages:
   - name: lint
     if: NOT branch =~ ^release/\d+\.\d+\.\d+$
   - name: test
-    if: type != push OR branch =~ ^release/\d+\.\d+\.\d+$
+    if: type != push OR branch =~ ^release/\d+\.\d+\.\d+$ OR ^hotfix/\d+\.\d+\.\d+$
   - name: deploy
-    if: branch =~ ^release/\d+\.\d+\.\d+$
+    if: branch =~ ^release/\d+\.\d+\.\d+$ OR ^hotfix/\d+\.\d+\.\d+$
 jobs:
   include:
    
