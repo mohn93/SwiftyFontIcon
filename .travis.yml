@@ -27,6 +27,7 @@ branches:
     - develop
     - master
     - /^release/\d+\.\d+\.\d+$/
+    - /^hotfix/\d+\.\d+\.\d+$/
 stages:
   - name: lint
     if: NOT branch =~ ^release/\d+\.\d+\.\d+$
