@@ -124,6 +124,10 @@ Swift 4
 
 mohn93, mohn93@gmail.com
 
+## Inspiration
+
+[Swicon](https://github.com/UglyTroLL/Swicon)
+
 ## License
 
 SwiftyFontIcon is available under the MIT license. See the LICENSE file for more info.
