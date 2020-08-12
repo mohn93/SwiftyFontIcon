@@ -105,7 +105,7 @@ SwfIcon.instance.loadAllAsync() //Or Sync, depends on your needs
 
 If you need to automate maping these things and create a strongly typed icons to use with `.icon(...)` syntax, you can take a look at this tool https://swiftyicongen.herokuapp.com
 
-## How to use SwiftyIconGenerator to generate you oun custom font
+## How to use SwiftyIconGenerator to generate you own custom font
 * Open https://swiftyicongen.herokuapp.com, you'll be presented with list of pre-existing icons you can select from them or you can drag and drop you own SVG icon files.
 * After that name the class of your icons, this should be a valid swift class name.
 * Then click on download, you will recieve a zip file that contains three files:
